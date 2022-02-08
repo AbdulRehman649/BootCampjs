@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java4 Work</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: rgb(231, 230, 247);
+      }
+      h1 {
+        margin-left: 30%;
+      }
+      pre {
+        display: grid;
+        /* grid-template-columns: repeat(auto-fill); */
+      }
+      .cls {
+        border: 7px dashed red;
+        background-color: rgb(255, 251, 0);
+        margin-left: 10%;
+        /* margin-right: 5%; */
+        width: 90%;
+      }
+      .hide {
+        display: none;
+      }
+      .aside {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="search">
+        <p style="color: red">DEALERS OF ALEXANDRIA</p>
+        <label for="">SEARCH YOUR CAR HERE</label><br />
+        <input
+          type="search"
+          name=""
+          id="search"
+          placeholder="EXAMPLE LEXUS ETC..."
+          onkeyup="get()"
+        />
+        <br /><br />
+        <div class="aside">
+          <h3>list of availible cars</h3>
+          <ul>
+            <li>TAYOTA CAROLLA</li>
+            <li>BMW A6</li>
+            <li>VOLVO A9</li>
+            <li>HONDA ACCORD</li>
+            <li>MERCEDES BENZ</li>
+            <li>FORD 49</li>
+            <li>LAMBARGHONI A5</li>
+            <li>LEXUS H6</li>
+            <li>NISSAN ALTIS</li>
+          </ul>
+        </div>
+      </h1>
+      <pre>
+    <h5>
+   <div class="cls">
+    NAME:TAYOTA CAROLLA
+    MODEL :Carolla
+    YEAR: 2012
+    PLATE NUMBER :4653
+    OWNED BY : JILL
+   </div>
+<div class="cls">
+    NAME:BMW
+    MODEL :A6
+    YEAR: 2012
+    PLATE NUMBER :7633
+    OWNED BY : owell
+</div>
+   <div class="cls">
+    NAME:VOLVO
+    MODEL :A9
+    YEAR: 2019
+    PLATE NUMBER :88277
+    OWNED BY : LOWESL
+   </div>
+   <div class="cls">
+    NAME:HONDA
+    MODEL :ACCORD
+    YEAR: 2012
+    PLATE NUMBER :098
+    OWNED BY : MERU
+   </div>
+<div class="cls">
+    NAME:MERCEDES
+    MODEL :BENZ
+    YEAR: 2012
+    PLATE NUMBER :3453
+    OWNED BY : DAVE
+</div>
+<div class="cls">
+    NAME:FORD
+    MODEL :49
+    YEAR: 2012
+    PLATE NUMBER :1253
+    OWNED BY : JORGE
+</div>
+<div class="cls">
+    NAME:LAMBARGHONI
+    MODEL :T5
+    YEAR: 2017
+    PLATE NUMBER :78353
+    OWNED BY : ABDUL
+</div>
+<div class="cls">
+    NAME:LEXUS
+    MODEL :H6
+    YEAR: 2018
+    PLATE NUMBER :5453
+    OWNED BY : JORGE
+</div>
+<div class="cls">
+    NAME:NISSAN
+    MODEL :ALTIS
+    YEAR: 2012
+    PLATE NUMBER :76653
+    OWNED BY : OWN
+</div>
+    </h5>
+</pre>
+    </div>
+
+    <script>
+      function get() {
+        let inp = document.getElementById("search").value;
+        input = inp.toLowerCase();
+        let vr = document.getElementsByClassName("cls");
+
+        for (i = 0; i < vr.length; i++) {
+          if (!vr[i].innerHTML.toLowerCase().includes(inp)) {
+            vr[i].style.display = "none";
+          } else {
+            vr[i].style.display = "list-item";
+          }
+        }
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

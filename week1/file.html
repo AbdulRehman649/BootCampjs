@@ -37,6 +37,40 @@
     <br />
     <hr />
     <p id="big">click below to change the size of me</p>
-    <button onclick="document.getElementById('big').style.width400px"></button>
+    <button onclick="document.getElementById('big').style.fontSize='30px'">
+      click here
+    </button>
+    <button onclick="document.getElementById('big')">normal again</button>
+    <br />
+    <hr />
+    <p id="multi"></p>
+    <br />
+    <hr />
+
+    <script>
+      var x, y, z;
+      x = 5;
+      y = 10;
+      z = x * y;
+      document.getElementById("multi").innerHTML = z;
+    </script>
+    <script>
+      function mult(car, parts) {
+        return car * parts;
+      }
+      var sum = mult(2, 3);
+      alert(sum);
+    </script>
+    <hr />
+    <p>this is how you can get return of function</p>
+    <h2 id="ret"></h2>
+    <script>
+      var w = diw(6, 3);
+      document.getElementById("ret").innerHTML = w;
+
+      function diw(car, expense) {
+        return car / expense;
+      }
+    </script>
   </body>
 </html>
