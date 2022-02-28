@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const carInventory = [
+        {
+          name: "honda",
+          model: "accord",
+          year: 2012,
+          color: "white",
+        },
+        {
+          name: "tyota",
+          model: "camry",
+          year: 2003,
+          color: "black",
+        },
+        {
+          name: "volovo",
+          model: "wolf",
+          year: 2009,
+          color: "silver",
+        },
+      ];
+      for (i = 0; i < carInventory.length; i++) {
+        document.write(carInventory[i].model);
+        document.write(carInventory[i].year);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const carInventory = [
+        {
+          name: "honda",
+          model: "accord",
+          year: 2012,
+          color: "white",
+        },
+        {
+          name: "tyota",
+          model: "camry",
+          year: 2003,
+          color: "black",
+        },
+        {
+          name: "volovo",
+          model: "wolf",
+          year: 2009,
+          color: "silver",
+        },
+        {
+          name: "ferrari",
+          model: "ghnabia",
+          year: 2001,
+          color: "gold",
+        },
+        {
+          name: "landrover",
+          model: "lands",
+          year: 2002,
+          color: "grey",
+        },
+        {
+          name: "rangerover",
+          model: "rover",
+          year: 2004,
+          color: "silver",
+        },
+        {
+          name: "skydiver",
+          model: "diver",
+          year: 2014,
+          color: "blue",
+        },
+        {
+          name: "porche",
+          model: "culce",
+          year: 2019,
+          color: "red",
+        },
+        {
+          name: "mustang",
+          model: "mons",
+          year: 2016,
+          color: "nice",
+        },
+      ];
+      for(i=0; i < carInventory.length; i++) {
+       if(carInventory[i].year <2010){
+           document.write(carInventory[i].name +"," + carInventory[i].model)
+       }
+      
+       
+      }
+    </script>
+  </body>
+</html>
