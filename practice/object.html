@@ -64,10 +64,15 @@
           return this.firstname + " " + this.lastname;
         },
       };
-      document.getElementById("ene").innerHTML = person.fullname();
-      document.write(person5.eyecolor) 
-      document.write(person4.studentid)
-      document.write(person.age +person2.age)
+      const data = [person, person2, person3];
+      data.forEach(function (person) {
+        document.write(person.eyecolor +"<br>");
+      });
+
+      // document.getElementById("ene").innerHTML = person.fullname();
+      // document.write(person5.eyecolor);
+      // document.write(person4.studentid);
+      // document.write(person.age + person2.age);
     </script>
   </body>
 </html>
