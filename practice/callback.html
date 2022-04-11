@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="demo" > </p>
+     <script>
+        /* function frstOne(some){
+             document.getElementById("demo").innerHTML= some;
+         }
+         function myFirst(){
+             frstOne("hello");
+         }
+         function mySecond(){
+             frstOne("bey");
+            
+         }
+         myFirst();
+         mySecond();*/
+         function myQuiz(something){
+             document.getElementById("demo").innerHTML= something;
+         }
+         function myCalcu(num1 , num2 ,myCallback){
+             let sum = num1 +num2;
+             myCallback(sum); 
+         }
+         myCalcu(5,9,myQuiz)
+     </script>
+</body>
+</html>
