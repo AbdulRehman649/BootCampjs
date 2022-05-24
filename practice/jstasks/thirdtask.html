@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: aqua;
+      }
+      .first {
+        background-color: pink;
+        height: 500px;
+        width: 500px;
+        border: solid blue 6px;
+        padding: 20px;
+      }
+      .second {
+        background-color: aquamarine;
+        height: 500px;
+        width: 500px;
+        border: dotted black 6px;
+        padding: 20px;
+        float: right;
+        position: relative;
+      }
+      img {
+        display: none;
+        height: 200px;
+        width: 200px;
+      }
+      .parent {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <!--onmouseover="over()"
+    onmouseout="out()"-->
+    <div id="swapper-r" class="first" style="display: block">
+      <p id="hello"></p>
+      <p id="detail1"></p>
+
+      <button onclick="firstdiv()">CLICK FOR COUNTRY</button>
+      <button onclick="firstdiv2()">MORE INFORMATION</button>
+      <button onclick="simgp()">CLICK FOR PICTURE</button>
+      <img id="imp" src="pakis.jpg" alt="" />
+    </div>
+    <p>
+      <a href="javascript:swapd('swapper-r','swapper-b')">SWAP</a>
+    </p>
+    <!--onmouseover="out()"
+        onmouseout="over()"-->
+    <div id="swapper-b" class="second" style="display: none">
+      <p id="hello2"></p>
+      <p id="detail2"></p>
+
+      <button onclick="seconddiv()">CLICK FOR COUNTRY</button>
+      <button onclick="seconddiv2()">MORE INFORMATION</button>
+      <button onclick="simgu()">CLICK FOR PICTURE</button>
+      <img id="imu" src="usa.jpg" alt="" />
+    </div>
+
+    <script>
+      function firstdiv() {
+        document.getElementById("hello").innerHTML =
+          "ISLAMIC REPUBIC OF PAKISTAN";
+      }
+      function firstdiv2() {
+        document.getElementById("detail1").innerHTML =
+          "PAKISTAN is a beautifull country located in asia. its has four provisions and many cultures ";
+      }
+      function simgp() {
+        document.getElementById("imp").style.display = "block";
+      }
+      function seconddiv() {
+        document.getElementById("hello2").innerHTML =
+          "UNITED STATES OF AMERICA";
+      }
+      function seconddiv2() {
+        document.getElementById("detail2").innerHTML =
+          "UNITED States of America also called USA or America is super power of the world and have largest army ";
+      }
+      function simgu() {
+        document.getElementById("imu").style.display = "block";
+      }
+      function swapd(div1, div2) {
+        d1 = document.getElementById(div1);
+        d2 = document.getElementById(div2);
+        if (d2.style.display == "none") {
+          d1.style.display = "none";
+          d2.style.display = "block";
+        } else {
+          d1.style.display = "block";
+          d2.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
