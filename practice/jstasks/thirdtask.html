@@ -37,9 +37,14 @@
     </style>
   </head>
   <body>
-    <!--onmouseover="over()"
-    onmouseout="out()"-->
-    <div id="swapper-r" class="first" style="display: block">
+    <!--()"-->
+    <div
+      onmouseover="over()"
+      onmouseout="out()"
+      id="swapper-r"
+      class="first"
+      style="display: block"
+    >
       <p id="hello"></p>
       <p id="detail1"></p>
 
@@ -51,9 +56,14 @@
     <p>
       <a href="javascript:swapd('swapper-r','swapper-b')">SWAP</a>
     </p>
-    <!--onmouseover="out()"
-        onmouseout="over()"-->
-    <div id="swapper-b" class="second" style="display: none">
+    <!---->
+    <div
+      onmouseover="out()"
+      onmouseout="over()"
+      id="swapper-b"
+      class="second"
+      style="display: none"
+    >
       <p id="hello2"></p>
       <p id="detail2"></p>
 
@@ -96,6 +106,14 @@
           d1.style.display = "block";
           d2.style.display = "none";
         }
+      }
+      function out() {
+        document.getElementById("swapper-r").style.display = "none";
+        document.getElementById("swapper-b").style.display = "block";
+      }
+      function over() {
+        document.getElementById("swapper-b").style.display = "none";
+        document.getElementById("swapper-r").style.display = "block";
       }
     </script>
   </body>

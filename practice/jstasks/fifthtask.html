@@ -1,0 +1,149 @@
+s<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        background-color: antiquewhite;
+        border: 5px solid black;
+        margin: 75px;
+        margin-left: 400px;
+        width: 700px;
+        text-align: center;
+      }
+      body {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="myinput"
+      onkeyup="myFunction()"
+      placeholder="Search for names..."
+    />
+    <table id="mytable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Class</th>
+          <th>RollNO</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody id="dataa"></tbody>
+    </table>
+  </body>
+  <script>
+    document.getElementById("dataa").innerHTML = `<tr>
+      <td>sameer</td>
+      <td>13</td>
+      <td>7</td>
+      <td>434</td>
+      <td>a</td>
+    </tr>
+    <tr>
+        <td>Abdul</td>
+        <td>15</td>
+        <td>6</td>
+        <td>424</td>
+        <td>b</td>
+      </tr>
+      <tr>
+        <td>ali</td>
+        <td>33</td>
+        <td>6</td>
+        <td>234</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>unees</td>
+        <td>15</td>
+        <td>1</td>
+        <td>444</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <td>sheroz</td>
+        <td>13</td>
+        <td>7</td>
+        <td>434</td>
+        <td>c</td>
+      </tr>`;
+    const student = [
+      {
+        Name: "anne",
+        Age: "15",
+        Class: "6",
+        RollNo: "432",
+        grade: "c",
+      },
+      {
+        Name: "ahmii",
+        Age: "52",
+        Class: "9",
+        RollNo: "442",
+        grade: "A ",
+      },
+      {
+        Name: "ali",
+        Age: "12",
+        Class: "4",
+        RollNo: "452",
+        grade: "e",
+      },
+      {
+        Name: "ali",
+        Age: "12",
+        Class: "4",
+        RollNo: "452",
+        grade: "f",
+      },
+    ];
+
+    for (let i = 0; i < student.length; i++) {
+      const element = student[i];
+      // console.log(element);
+      let c = document.getElementById("dataa");
+      c.innerHTML += `<tr>
+        <td>${element.Name}</td>
+        <td>${element.Age}</td>
+         <td>${element.Class}</td>
+         <td>${element.RollNo}</td>
+         <td>${element.grade}</td>
+         </tr>`;
+      console.log(element);
+    }
+
+    function myFunction() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myinput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("mytable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
+  </script>
+</html>
+               

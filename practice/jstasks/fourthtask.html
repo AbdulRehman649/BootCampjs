@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      #dropZone,
+      #cars {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        min-height: 200px;
+        margin-bottom: 20px;
+      }
+
+      #dropBox1,
+      #dropBox2,
+      #dropBox3,
+      #dropBox4 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        width: 250px;
+        border: 1px solid #aaaaaa;
+        background-color: aqua;
+        padding: 1rem;
+      }
+
+      img {
+        height: 200px;
+        object-fit: cover;
+        width: 200px;
+      }
+      h1 {
+        color: red;
+        text-align: center;
+        padding: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SELECT THE RIGHT CAR FOR THE RIGHT BOX</h1>
+    <div id="dropZone">
+      <div id="dropBox1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p>BMW</p>
+      </div>
+      <div id="dropBox2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p>MERCEDES</p>
+      </div>
+      <div id="dropBox3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p>TESLA</p>
+      </div>
+      <div id="dropBox4" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p>FERRARI</p>
+      </div>
+    </div>
+
+    <div id="cars" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img
+        id="BMW"
+        src="bmw.jpg"
+        draggable="true"
+        ondragstart="drag(event)"
+        width="300"
+      />
+
+      <img
+        id="tesla"
+        src="tesla.jpg"
+        draggable="true"
+        ondragstart="drag(event)"
+        width="300"
+      />
+
+      <img
+        id="ferari"
+        src="ferari.jpg"
+        draggable="true"
+        ondragstart="drag(event)"
+        width="300"
+      />
+
+      <img
+        id="mercedes"
+        src="mercedes.jpg"
+        draggable="true"
+        ondragstart="drag(event)"
+        width="300"
+      />
+    </div>
+    <script>
+      function allowDrop(event) {
+        event.preventDefault();
+      }
+
+      function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+      }
+
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(data));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <tr>
+      <td>sameer</td>
+      <td>13</td>
+      <td>7</td>
+      <td>434</td>
+      <td>c</td>
+    </tr>
+    <tr>
+        <td>Abdul</td>
+        <td>15</td>
+        <td>6</td>
+        <td>424</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>ali</td>
+        <td>33</td>
+        <td>6</td>
+        <td>234</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>unees</td>
+        <td>15</td>
+        <td>1</td>
+        <td>444</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>sheroz</td>
+        <td>13</td>
+        <td>7</td>
+        <td>434</td>
+        <td>c</td>
+      </tr>
+      <script>
+           function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, j, txtValue;
+      input = document.getElementById("myinput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("mytable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+      </script>
+  </body>
+</html>
